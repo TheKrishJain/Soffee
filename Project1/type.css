@@ -1,0 +1,130 @@
+*:focus{
+    outline: none;
+}
+
+.button{
+    font-size: medium;
+    width: 250px;
+    height:29px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    cursor: pointer;
+    border-color: white;
+}
+.button:hover{
+    width: 240px;
+    height:27px;
+}
+
+.table{
+border: 1px solid white;
+height: 430px;
+width: 350px;
+color:white;
+border-radius:20px;
+backdrop-filter:blur(8px);
+}
+.table1{
+    border: 1px solid white;
+    height: 320px;
+    width: 390px;
+    color:white;
+    border-radius:20px;
+    backdrop-filter:blur(8px);
+    }
+body{
+    display: flex;
+    justify-content: center;
+    background: url(a.jpg) ;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding:130px 0px;
+   
+    
+}
+.credential{
+
+border: 1.5px solid white;
+border-radius: 7px;
+background-color: transparent;
+color: orange;
+height: 20px;
+z-index: -1;
+}
+
+.smalltext{
+        font-size:small;
+    }
+.Rememberme{
+     cursor: pointer;
+      color: orange;
+      accent-color: orange;
+}
+.Rememberme:hover{
+     color: orange;
+}
+.showpass{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 2;
+    position: relative;
+    /* right:27px; */
+    font-size: 13.5px;
+}
+.showpass:hover{
+    color: orange;
+}
+/* . */
+#forgotpass{
+    text-decoration:none ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-right: 2px;
+}
+#forgotpass:hover{
+    color:orange;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ExistingUser{
+    text-decoration: none;
+}
+.ExistingUser:hover{
+    color:orange;
+    font-size: 15px;
+    font-weight: bold;
+}
+#hrule{
+
+    text-align: left;
+    width:77px;
+    color:white
+}
+#DOB{
+    border:none;
+    background-color: transparent;
+    color:orange;
+    font-weight: bold;
+    font-size: large;
+}
+/* signinshowpass{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 2;
+   
+    font-size: 13.5px;
+      right:27px; 
+
+}
+.signinshowpass:hover{
+    color: lightblue;
+} */
