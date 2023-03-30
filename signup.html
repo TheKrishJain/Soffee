@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="type.css">
+    <script src="main.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+ .table{
+    width: 450px;
+    height: 350px;
+ }
+
+    </style>
+</head>
+
+<body link="white" vlink="white">
+    <form name="form" action="#" method="post" class="form">
+        <table align="center" cellspacing="9" cellpadding="9" name="table" class="table1">
+            <tr>
+                <td colspan="4" align="center">
+                    <h1>Create An Account</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">User Name :</td>
+                <td colspan="2" align="right"><Input type="text" name="username" id="username" class="credential" Required></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2">Email Id</td>
+                <td colspan="2" align="right"><Input type="email" name="EmailId" id="SignupMail" Required class="credential"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Password</td>
+                <td colspan="2" align="right"><Input type="password" name="Password" id="ogPassword" class="credential" Required></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">Re-Enter Password</td>
+                <td colspan="2" align="right"><Input type="password" name="Password" id="rePassword" class="credential" onkeyup="checkPass()"></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" align="center" valign="bottom"><Input type="submit" name="SignupButton" Id="signupbutton" class="button"
+                        value="Create Account" ></td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <hr id="hrule">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" align="center">Already Have An Account? <a href="login.html" id="createAcc" class="ExistingUser"> LogIn</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="4" align="center"><a href="index.html" id="createAcc" class="ExistingUser">Back to Home</a>
+                </td>
+            </tr>
+            
+
+
+        </table>
+
+    </form>
+
+    
+</body>
+
+</html>
