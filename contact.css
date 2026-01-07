@@ -1,17 +1,15 @@
-/* ================= GLOBAL RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    overflow-x: hidden;
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #edeae3;
     color: #333;
 }
+
 
 
 /* ================= NAVBAR ================= */
@@ -23,7 +21,7 @@ html, body {
 }
 
 .logo {
-    z-index: 2;
+    z-index: 5;
     margin-left: 1%;
     font-size: 32px;
     color: #bc9667;
