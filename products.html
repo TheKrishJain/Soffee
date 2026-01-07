@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soffee | Our Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Soffee - Premium coffee products, mugs, and lifestyle accessories.">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+<link rel="preload" href="GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="SecularOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="Pacifico-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <!-- CSS -->
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo">Soffee</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="journey.html">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="page-header">
+    <h1>Our Coffee Collection</h1>
+    <p>Crafted from handpicked beans. Designed for the soul.</p>
+</header>
+
+<!-- ================= PRODUCTS WRAPPER ================= -->
+<section class="products-wrapper">
+
+    <!-- INITIAL PRODUCTS -->
+    <div class="products-container">
+        <div class="product-card" >
+            <div class="price-tag">₹349</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c1.png" alt="Espresso Roast"></div>
+                <h3>Espresso Roast</h3>
+                <p>Dark · Bold · Intense</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹299</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c2.png" alt="Classic Filter"></div>
+                <h3>Classic Filter</h3>
+                <p>Smooth · Balanced</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹329</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c3.png" alt="South Indian Blend"></div>
+                <h3>South Indian Blend</h3>
+                <p>Strong · Aromatic</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹279</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c4.png" alt="Cold Brew"></div>
+                <h3>Cold Brew</h3>
+                <p>Light · Refreshing</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹359</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c5.png" alt="Caramel Roast"></div>
+                <h3>Caramel Roast</h3>
+                <p>Sweet · Warm</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹399</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c6.png" alt="Signature Blend"></div>
+                <h3>Signature Blend</h3>
+                <p>Premium · Elegant</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MORE PRODUCTS -->
+    <div class="products-container more-products" id="moreProducts">
+        <div class="product-card" >
+            <div class="price-tag">₹319</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c1.png"></div>
+                <h3>Morning Roast</h3>
+                <p>Light · Smooth</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹349</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c2.png"></div>
+                <h3>Midnight Brew</h3>
+                <p>Dark · Strong</p>
+            </div>
+        </div>
+
+        <div class="product-card" >
+            <div class="price-tag">₹379</div>
+            <div class="card-inner">
+                <div class="img-box"><img src="images/c3.png"></div>
+                <h3>Heritage Filter</h3>
+                <p>Classic · Rich</p>
+            </div>
+        </div>
+
+        <!-- add more products as needed -->
+    </div>
+
+    <!-- EXPLORE MORE BUTTON -->
+    <div class="explore-more">
+        <button id="exploreBtn">Explore full collection ↓</button>
+    </div>
+
+</section>
+<!-- ================= PRODUCT MODAL ================= -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <div class="modal-img-wrapper">
+            <span class="prev">&#10094;</span>
+            <img id="modalImg" src="" alt="">
+            <span class="next">&#10095;</span>
+        </div>
+
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <p id="modalPrice"></p>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
+<footer class="container4" id="contact">
+
+    <div class="contact">
+
+        <h1 id="contacth">Contact Us</h1>
+
+        <p>Write Us On:</p>
+        <a href="mailto:Krishjain2911@gmail.com?Subject=Order" id="mailto">Krishjain2911@gmail.com</a>
+
+        <p>Call Us On:</p>
+        <a href="tel:+917021786016" id="telto">7021786016</a>
+
+        <p class="footer-love">
+            Made with <i class="fa fa-heart"></i>
+        </p>
+
+        <p class="copyright">
+            © 2023 Soffee. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+    document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const name = card.querySelector('h3').innerText;
+        openProduct(name);
+    });
+});
+
+/// Define products with multiple images (demo with c1-c8)
+const products = [
+    {name:'Espresso Roast', price:'₹349', desc:'Dark · Bold · Intense', images:['images/c1.png','images/c2.png','images/c3.png']},
+    {name:'Classic Filter', price:'₹299', desc:'Smooth · Balanced', images:['images/c4.png','images/c5.png','images/c6.png']},
+    {name:'South Indian Blend', price:'₹329', desc:'Strong · Aromatic', images:['images/c7.png','images/c8.png','images/c1.png']},
+    {name:'Cold Brew', price:'₹279', desc:'Light · Refreshing', images:['images/c2.png','images/c3.png','images/c4.png']},
+    {name:'Caramel Roast', price:'₹359', desc:'Sweet · Warm', images:['images/c5.png','images/c6.png','images/c7.png']},
+    {name:'Signature Blend', price:'₹399', desc:'Premium · Elegant', images:['images/c8.png','images/c1.png','images/c2.png']}
+];
+
+let currentProductIndex = 0;
+let currentImageIndex = 0;
+products.push(
+    {name:'Morning Roast', price:'₹319', desc:'Light · Smooth', images:['images/c1.png','images/c2.png']},
+    {name:'Midnight Brew', price:'₹349', desc:'Dark · Strong', images:['images/c2.png','images/c3.png']},
+    {name:'Heritage Filter', price:'₹379', desc:'Classic · Rich', images:['images/c3.png','images/c4.png']}
+);
+
+// Modal elements
+const modal = document.getElementById("productModal");
+const modalImg = document.getElementById("modalImg");
+const modalName = document.getElementById("modalName");
+const modalDesc = document.getElementById("modalDesc");
+const modalPrice = document.getElementById("modalPrice");
+const closeBtn = document.querySelector(".modal .close");
+
+// Arrows
+const prevArrow = document.querySelector(".modal-img-wrapper .prev");
+const nextArrow = document.querySelector(".modal-img-wrapper .next");
+
+// Open modal for product
+function openProduct(name) {
+    currentProductIndex = products.findIndex(p => p.name === name);
+    currentImageIndex = 0; // always start with first image
+    updateModal();
+    modal.style.display = "block";
+}
+
+// Update modal content and current image
+function updateModal() {
+    const product = products[currentProductIndex];
+    modalImg.src = product.images[currentImageIndex];
+    modalImg.alt = product.name + ' image ' + (currentImageIndex+1);
+    modalName.innerText = product.name;
+    modalDesc.innerText = product.desc;
+    modalPrice.innerText = product.price;
+}
+
+// Close modal
+closeBtn.onclick = () => { modal.style.display = "none"; }
+window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
+
+// Navigate images with arrows
+prevArrow.onclick = () => {
+    const images = products[currentProductIndex].images;
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateModal();
+}
+
+nextArrow.onclick = () => {
+    const images = products[currentProductIndex].images;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateModal();
+}
+
+// Attach click event to all product cards
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const name = card.querySelector('h3').innerText;
+        openProduct(name);
+    });
+});
+
+// Explore more button
+const exploreBtn = document.getElementById("exploreBtn");
+const moreProducts = document.getElementById("moreProducts");
+
+exploreBtn.addEventListener("click", () => {
+    const expanded = moreProducts.classList.toggle("show");
+    exploreBtn.innerText = expanded ? "Show less ↑" : "Explore full collection ↓";
+    exploreBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+</script>
+
+</body>
+</html>

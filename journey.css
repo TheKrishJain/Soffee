@@ -1,0 +1,301 @@
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* Base reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto',sans-serif; color:#fff; background:#000; overflow-x:hidden; }
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* align menu items to right */
+    align-items: center;
+    background-color: transparent; /* dark theme */
+    position: fixed; /* fixed at top */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 31.5px;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 30px; /* spacing between menu items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+    text-decoration: underline;
+}
+
+header.header {
+    padding-top: 120px; /* add enough top padding for navbar */
+    text-align: center;
+    background: transparent;
+}
+
+
+header h1 { font-size:3rem; margin-bottom:10px; }
+header p { font-size:1.2rem; color:#ddd; }
+
+/* Main scroll container */
+.coffee-journey { position: relative; height: 400vh; }
+
+/* Video container (all videos stacked) */
+.video-layer {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(0.7);
+}
+
+/* Overlay content */
+.content-overlay {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index:2;
+    max-width:700px;
+    opacity:0;
+    transition: opacity 0.8s ease;
+}
+
+.content-overlay.active { opacity:1; }
+
+.content-overlay h2 {
+    font-size:2.5rem;
+    margin-bottom:15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.content-overlay p {
+    font-size:1.2rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header h1{font-size:2rem;}
+    .content-overlay h2{font-size:1.8rem;}
+    .content-overlay p{font-size:1rem;}
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* ================= HEADER ================= */
+header.header {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+    background: linear-gradient(135deg, #4b2e2e, #7a5c50);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+/* ================= SCROLL CONTAINER ================= */
+.coffee-journey {
+    position: relative;
+    height: 400vh;
+}
+
+/* ================= VIDEO ================= */
+#video-container {
+    position: fixed;
+    top: 70px; /* BELOW NAVBAR */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    z-index: 1;
+}
+
+#journey-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+/* ================= TEXT OVERLAY ================= */
+.content-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    max-width: 720px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.content-overlay.active {
+    opacity: 1;
+}
+
+.content-overlay h2 {
+    font-size: 2.6rem;
+    margin-bottom: 14px;
+    text-shadow: 2px 4px 12px rgba(0,0,0,0.7);
+}
+
+.content-overlay p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1.05rem;
+    }
+
+    .content-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .content-overlay p {
+        font-size: 1rem;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar ul {
+        gap: 16px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    /* Header */
+    header.header {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    /* Video */
+    #video-container {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    /* Overlay */
+    .content-overlay {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .content-overlay h2 {
+        font-size: 1.6rem;
+    }
+
+    .content-overlay p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 360px) {
+    .content-overlay h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-overlay p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soffee | Coffee Journey</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="description" content="Soffee - Premium coffee products, mugs, and lifestyle accessories.">
+
+<style>
+/* Base reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto',sans-serif; color:#fff; background:#000; overflow-x:hidden; }
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* align menu items to right */
+    align-items: center;
+    background-color: transparent; /* dark theme */
+    position: fixed; /* fixed at top */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 31.5px;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 30px; /* spacing between menu items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+    text-decoration: underline;
+}
+
+header.header {
+    padding-top: 120px; /* add enough top padding for navbar */
+    text-align: center;
+    background: transparent;
+}
+
+
+header h1 { font-size:3rem; margin-bottom:10px; }
+header p { font-size:1.2rem; color:#ddd; }
+
+/* Main scroll container */
+.coffee-journey { position: relative; height: 400vh; }
+
+/* Video container (all videos stacked) */
+.video-layer {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(0.7);
+}
+
+/* Overlay content */
+.content-overlay {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index:2;
+    max-width:700px;
+    opacity:0;
+    transition: opacity 0.8s ease;
+}
+
+.content-overlay.active { opacity:1; }
+
+.content-overlay h2 {
+    font-size:2.5rem;
+    margin-bottom:15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.content-overlay p {
+    font-size:1.2rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header h1{font-size:2rem;}
+    .content-overlay h2{font-size:1.8rem;}
+    .content-overlay p{font-size:1rem;}
+}
+
+@media (max-width: 360px) {
+    .content-overlay h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+<link rel="preload" href="GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="SecularOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="Pacifico-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" >Products</a></li>
+        <li><a href="journey.html" class="active">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <h1>Soffee Coffee Journey</h1>
+    <p>Scroll to experience coffee like never before</p>
+</header>
+
+<main class="coffee-journey">
+    <!-- Stacked Videos -->
+    <video class="video-layer" id="video1" autoplay muted loop playsinline src="videos/pro1.mp4"></video>
+    <video class="video-layer" id="video2" autoplay muted loop playsinline src="videos/pro2.mp4"></video>
+    <video class="video-layer" id="video3" autoplay muted loop playsinline src="videos/pro3.mp4"></video>
+    <video class="video-layer" id="video4" autoplay muted loop playsinline src="videos/pro4.mp4"></video>
+
+    <!-- Overlay Content -->
+    <div class="content-overlay" id="content-overlay">
+        <h2 id="stage-title">The Bean</h2>
+        <p id="stage-desc">It all starts with the finest coffee beans sourced from premium farms.</p>
+    </div>
+</main>
+
+<script>
+// Stages definition with scroll ranges
+const stages = [
+    {start:0, end:100, video:'video1', title:'The Bean', desc:'It all starts with the finest coffee beans sourced from premium farms.'},
+    {start:100, end:200, video:'video2', title:'Roasting', desc:'Carefully roasted to bring out the perfect aroma and flavor in every bean.'},
+    {start:200, end:300, video:'video3', title:'Brewing', desc:'Expertly brewed to create a perfect cup every single time.'},
+    {start:300, end:400, video:'video4', title:'The Experience', desc:'Savor the aroma, enjoy the flavor, and delight in every sip of your perfect coffee.'}
+];
+
+const overlay = document.getElementById('content-overlay');
+const stageTitle = document.getElementById('stage-title');
+const stageDesc = document.getElementById('stage-desc');
+const videos = {
+    video1: document.getElementById('video1'),
+    video2: document.getElementById('video2'),
+    video3: document.getElementById('video3'),
+    video4: document.getElementById('video4')
+};
+
+// Scroll event
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY / window.innerHeight * 100;
+
+    stages.forEach(stage => {
+        if(scrollY >= stage.start && scrollY < stage.end){
+            // Fade in current video
+            for(let key in videos){
+                videos[key].style.opacity = (key === stage.video) ? 1 : 0;
+            }
+
+            // Update overlay content
+            stageTitle.textContent = stage.title;
+            stageDesc.textContent = stage.desc;
+            overlay.classList.add('active');
+        }
+    });
+});
+
+// Optional: fade overlay out when not in stage
+window.addEventListener('scroll', () => {
+    if(window.scrollY === 0 || window.scrollY + window.innerHeight >= document.body.scrollHeight){
+        overlay.classList.remove('active');
+    }
+});
+</script>
+
+</body>
+</html>

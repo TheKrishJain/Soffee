@@ -1,0 +1,279 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeae3;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+    background-color: #111;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 31.5px;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-page {
+    padding: 60px 20px;
+    background-color: #edeae3;
+}
+
+.contact-title {
+    text-align: center;
+    font-family: Soffee2;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-family: Soffee1;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+/* ================= CONTACT LAYOUT ================= */
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ================= FORM ================= */
+.contact-form {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 18px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid orange;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #bc9667;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    width: 180px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid orange;
+    color: orange;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: orange;
+    color: white;
+}
+
+/* ================= MAP ================= */
+.map-box {
+    width: 42%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid orange;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ================= MAP FEATURE SECTION ================= */
+.map-section {
+    background: #111;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-card {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background: #181818;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.map-info h2 {
+    font-family: Soffee2;
+    font-size: 36px;
+    color: #bc9667;
+    margin-bottom: 20px;
+}
+
+.address {
+    font-family: Soffee1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.map-cta {
+    display: inline-block;
+    padding: 12px 26px;
+    border: 1px solid orange;
+    border-radius: 30px;
+    color: orange;
+    text-decoration: none;
+    font-family: Soffee1;
+    transition: all 0.3s ease;
+}
+
+.map-cta:hover {
+    background: orange;
+    color: #111;
+}
+
+
+/* ===================== FOOTER ===================== */
+.container4 {
+    background: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+#contacth {
+    font-family: Soffee2;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.container4 p {
+    margin: 10px 0;
+}
+
+#mailto,
+#telto {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-love {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.footer-love i {
+    color: red;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-form,
+    .map-box {
+        width: 100%;
+    }
+
+    .map-box {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .contact-title {
+        font-size: 34px;
+    }
+
+    .contact-subtitle {
+        font-size: 16px;
+    }
+
+    .map-section {
+        padding: 60px 16px;
+    }
+
+    .map-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .map-info h2 {
+        font-size: 28px;
+    }
+
+    .address {
+        font-size: 16px;
+    }
+}
