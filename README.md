@@ -3,7 +3,7 @@
 Soffee is a fully responsive, front-end website designed for a premium coffee brand.  
 The project demonstrates strong fundamentals in HTML, CSS, and JavaScript, with emphasis on layout precision, responsiveness, and performance-aware UI design.
 
-🔗 Live Demo: https://krishjain.github.io/Soffee
+🔗 Live Demo: https://thekrishjain.github.io/Soffee
 
 ---
 
