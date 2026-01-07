@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeae3;
+    color: #333;
+}
+
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+}
+
+.logo {
+    z-index: 2;
+    margin-left: 1%;
+    font-size: 32px;
+    color: #bc9667;
+    font-family: 'Pacifico', cursive;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 31.5px;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orange;
+}
+
+/* ================= HERO ================= */
+.hero-recipe {
+  text-align: center;
+  padding: 80px 5vw;
+  background: url('images/coffee-hero.jpg') center/cover no-repeat;
+  color: white;
+}
+
+.hero-recipe h1 {
+  font-size: clamp(28px, 6vw, 60px);
+  margin-bottom: 15px;
+}
+
+.hero-recipe p {
+  font-size: clamp(16px, 2vw, 22px);
+}
+/* ================= RECIPES VIDEOS ================= */
+.recipes-videos {
+  padding: 60px 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #f5f3ee;
+}
+
+.recipes-videos h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #bc9667;
+  margin-bottom: 40px;
+}
+
+/* Video grid container */
+.video-grid {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center videos horizontally */
+  gap: 40px;              /* space between videos */
+}
+
+.video-grid iframe {
+  width: 180%;
+  max-width: 860px;
+  height: 315px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-grid iframe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-recipe {
+    padding: 60px 5vw;
+  }
+
+  .video-grid iframe {
+    height: 200px;
+  }
+}
+
+
+/* ================= FOOTER ================= */
+.container4 {
+    background: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+#contacth {
+    font-family: Soffee2;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 10px;
+}
+
+.container4 p {
+    margin: 10px 0;
+}
+
+#mailto,
+#telto {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-love {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.footer-love i {
+    color: red;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-recipe {
+    padding: 60px 5vw;
+  }
+
+  .video-grid iframe {
+    height: 200px;
+  }
+}

@@ -1,0 +1,423 @@
+/* ===================== GLOBAL RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeae3;
+    color: #333;
+}
+
+/* ===================== CUSTOM FONTS ===================== */
+@font-face {
+    font-family: Soffee;
+    src: url(GreatVibes-Regular.ttf);
+}
+
+@font-face {
+    font-family: Soffee1;
+    src: url(SecularOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Soffee2;
+    src: url(Pacifico-Regular.ttf);
+}
+
+/* ===================== HEADER / HERO ===================== */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 31.5px;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Auth buttons */
+.auth {
+    margin-left: auto;
+}
+
+.signup {
+    margin-left: 20px;
+}
+
+/* Background image */
+#bgimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+/* ===================== HERO CONTENT ===================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5vw;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Coffee Text + Button Wrapper */
+.coffeetext {
+    max-width: 500px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers button under text */
+    text-align: center;  /* centers all text */
+}
+
+#coffeepara {
+    font-family: Soffee;
+    font-size: clamp(80px, 15vw, 180px);
+    color: #bc9667;
+    line-height: 1.1;
+}
+
+#coffeedescription {
+    font-family: Soffee1;
+    font-size: clamp(16px, 1.5vw, 22px);
+    color: #edeae3;
+    margin-top: 10px;
+}
+
+/* Explore Button */
+#explorebutton {
+    width: 220px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid orange;
+    border-radius: 12px;
+    color: orange;
+    font-size: 16px;
+    font-family: Soffee1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px; /* distance below text */
+}
+
+#explorebutton:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* ===================== HERO IMAGES ===================== */
+.images {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    overflow: visible; /* allow mug to be on top of bs */
+}
+
+/* Background Cup */
+#bs {
+    position: absolute;
+    width: clamp(400px, 40vw, 600px);
+    top: 35%;
+    right: 0;
+    
+    filter: brightness(90%);
+    z-index: 1; /* behind mug */
+    transition: all 0.3s ease;
+}
+
+/* Mug Foreground */
+#mug {
+    position: absolute;
+    width: clamp(550px, 34vw, 700px);
+    top: 40%; /* slightly higher than bs for layering */
+    right: 0; /* aligned with bs */
+    z-index: 2; /* always on top */
+    transition: all 0.3s ease;
+}
+
+/* ===================== STORY SECTION ===================== */
+.history {
+    background-color: #edeae3;
+    padding: 100px 5vw;
+}
+
+#storyhead {
+    text-align: center;
+    font-family: Soffee2;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 60px;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.history-img video {
+    width: 50vw;
+    max-width: 600px;
+    border-radius: 15px;
+}
+
+#history-about {
+    width: 50%;
+    min-width: 300px;
+
+}
+
+.history-par {
+    font-family: Soffee1;
+    font-size: clamp(16px, 1.2vw, 20px);
+    margin-bottom: 10px;
+}
+
+/* Story Button */
+#storya {
+    display: flex;
+    justify-content: center; /* center button */
+    margin-top: 30px;
+    margin-right: 70px;
+    text-decoration: none;
+}
+
+#storybutton {
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid orange;
+    border-radius: 12px;
+    color: orange;
+    font-family: Soffee1;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+   text-decoration: none;
+}
+
+#storybutton:hover {
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+}
+
+/* ===================== PRODUCTS ===================== */
+.container3 {
+    padding: 80px 5vw;
+    background-color: white;
+    cursor: pointer;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Soffee2;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 60px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-15px);
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.innersq {
+    width: 230px;
+    height: 210px;
+    background-color: rgba(230, 230, 230, 0.6);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innersq img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ===================== FOOTER ===================== */
+.container4 {
+    background: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+#contacth {
+    font-family: Soffee2;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.container4 p {
+    margin: 10px 0;
+}
+
+#mailto,
+#telto {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-love {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.footer-love i {
+    color: red;
+}
+
+/* ===================== RESPONSIVE HERO IMAGES ===================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 0 5vw;
+    }
+
+    .images {
+        width: 50%;
+    }
+
+    #bs {
+        top: 12%;
+        width: 35vw;
+    }
+
+    #mug {
+        top: 18%;
+        width: 30vw;
+    }
+}
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 5vw;
+    }
+
+    .coffeetext {
+        align-items: center;
+        text-align: center;
+    }
+
+    #coffeepara {
+        font-size: clamp(50px, 12vw, 90px);
+    }
+
+    #coffeedescription {
+        font-size: 18px;
+    }
+
+    .images {
+        width: 100%;
+        height: 300px; /* set a fixed height for mobile hero images */
+        position: relative;
+        margin-top: 40px;
+    }
+
+    /* Keep absolute positioning for layering */
+    #bs {
+        position: absolute;
+        top: 30%;
+        right: 2%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #mug {
+        position: absolute;
+        top: 35%; /* slightly above bs */
+        right: 6%;
+        width: 90%;
+        z-index: 2; /* stays on top */
+    }
+
+    .history-content {
+        flex-direction: column;
+    }
+
+    .history-img img {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    #history-about {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
