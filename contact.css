@@ -13,15 +13,22 @@ html, body {
     color: #333;
 }
 
+
 /* ================= NAVBAR ================= */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-  
     background-color: #111;
 }
 
+.logo {
+    z-index: 2;
+    margin-left: 1%;
+    font-size: 32px;
+    color: #bc9667;
+    font-family: 'Pacifico', cursive;
+}
 
 .navbar ul {
     list-style: none;
@@ -43,11 +50,6 @@ html, body {
 .navbar a.active {
     color: orange;
 }
-.navbar a:hover,
-.navbar a.active {
-    color: orange;
-}
-
 /* ================= CONTACT PAGE ================= */
 .contact-page {
     padding: 60px 20px;
